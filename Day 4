@@ -1,0 +1,30 @@
+contract - 0xe6Eeb5a98aaE6d178fb2665F195Ba93D27F96381
+Url - https://ropsten.etherscan.io/tx/0x4c86c681ebdfdd84c229ba06a9a3d3f80b15513a7b503c54ee571689191d855f
+
+
+
+Code:
+
+pragma solidity ^ 0.4.17 ; 
+contract ReportCard { 
+    
+    string public Name;
+    uint public Rollno;
+    string public Batch;
+    uint public Marks;
+    string public Status;
+
+
+    function ReportCard (string  NewName,  uint  NewRollno,string NewBatch,uint NewMarks,string  NewStatus)public{
+            Name = NewName;
+            Rollno = NewRollno;
+            Batch = NewBatch;
+            Marks = NewMarks;
+            Status = NewStatus;
+    }
+    
+    function getReportCard() public view returns(string,uint,string,uint,string) {
+        return(Name,Rollno,Batch,Marks,Status);
+    }
+    
+}
