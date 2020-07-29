@@ -1,0 +1,21 @@
+pragma solidity ^ 0.4.17 ; 
+contract Onlinecourse { 
+    
+    string public Name;
+    uint public Rollno;
+    string public Batch;
+   
+
+
+    function Onlinecourse(string  NewName,  uint  NewRollno,string NewBatch)public{
+            Name = NewName;
+            Rollno = NewRollno;
+            Batch = NewBatch;
+        
+    }
+    
+    function getOnlinecourse() public view returns(string,uint,string) {
+        return(Name,Rollno,Batch);
+    }
+    
+}
